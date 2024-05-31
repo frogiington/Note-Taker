@@ -3,7 +3,7 @@ const fs = require('node:fs');
 const fileStream = require('fs');
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 var jsonTest = JSON.parse(`{"title": "", "text": "t"}`)
 const noteArray = [];
 app.use(express.json());

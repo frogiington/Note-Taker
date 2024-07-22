@@ -47,14 +47,14 @@ app.listen(port, () => {
 
 function saveJSONObject(){
     var convertedData = JSON.stringify(noteArray)
-    fs.writeFile('Develop/db/db.json', convertedData,  (err) => {
+    fs.writeFile('db/db.json', convertedData,  (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
     });
 }
 
 function readJSONFile(){
-    fs.readFile('Develop/db/db.json','utf8', (err, data) => {
+    fs.readFile('db/db.json','utf8', (err, data) => {
         if (err) throw err;
         console.log(data);
     });
